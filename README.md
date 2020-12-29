@@ -9,8 +9,8 @@ This project is built using [Flask](http://flask.pocoo.org/) web framework.
 1. First clone this repository and `cd` into it.
 
    ```bash
-   $ git clone git@github.com:TwilioDevEd/sms2fa-flask.git
-   $ cd sms2fa-flask
+   $ git clone https://github.com/bmwasaru/getmulla.git
+   $ cd getmulla
    ```
 
 1. Create a new virtual environment.
