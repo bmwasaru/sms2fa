@@ -1,6 +1,6 @@
 # sms2fa
 
-Two Factor Authentication using SMS, initially a project by Twilion Dev modified to use Africa's Taking API
+Two Factor Authentication using SMS, initially a project by Twilio Dev modified to use Africa's Taking API
 
 ## Local Development
 
