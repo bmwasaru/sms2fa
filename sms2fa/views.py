@@ -43,7 +43,7 @@ def sign_in():
             return redirect(url_for('confirmation'))
         flash('Wrong user/password.', 'error')
 
-    send_confirmation_code(user.international_phone_number)
+        send_confirmation_code(user.international_phone_number)
     return render_template('sign_in.html', form=form)
 
 
