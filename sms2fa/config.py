@@ -4,7 +4,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class DefaultConfig(object):
-    SECRET_KEY = 'secret-key'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     DEBUG = False
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
     AT_USERNAME = os.environ.get('AT_USERNAME')
@@ -25,7 +25,8 @@ class TestConfig(DefaultConfig):
     PRESERVE_CONTEXT_ON_EXCEPTION = False
     DEBUG = True
 
+
 config_env_files = {
-    'test': 'pewa.config.TestConfig',
-    'development': 'pewa.config.DevelopmentConfig',
+    'test': 'sms2fa.config.TestConfig',
+    'development': 'sms2fa.config.DevelopmentConfig',
 }

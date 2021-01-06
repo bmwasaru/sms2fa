@@ -1,12 +1,12 @@
 from xmlunittest import XmlTestCase
-from pewa.models import User
+from sms2fa.models import User
 from passlib.hash import bcrypt
 
 
 class BaseTest(XmlTestCase):
 
     def setUp(self):
-        from pewa import app, db
+        from sms2fa import app, db
         self.app = app
         self.app.config['WTF_CSRF_ENABLED'] = False
         self.db = db

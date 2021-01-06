@@ -2,7 +2,7 @@ from .base import BaseTest
 from flask import url_for, session
 from flask_login import current_user
 import six
-from pewa.models import User
+from sms2fa.models import User
 if six.PY3:
     from urllib.parse import urlparse
 else:

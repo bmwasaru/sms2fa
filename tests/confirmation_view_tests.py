@@ -3,7 +3,7 @@ from flask import url_for
 from flask_login import current_user
 import six
 from mock import MagicMock
-from pewa import views
+from sms2fa import views
 if six.PY3:
     from urllib.parse import urlparse
 else:

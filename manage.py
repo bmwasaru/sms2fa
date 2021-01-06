@@ -1,7 +1,7 @@
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 from flask_migrate import upgrade as upgrade_database
-from pewa import db, prepare_app
+from sms2fa import db, prepare_app
 
 app = prepare_app(environment='development')
 migrate = Migrate(app, db)

@@ -1,5 +1,5 @@
-from pewa.config import config_env_files
-from pewa.models import db, User
+from sms2fa.config import config_env_files
+from sms2fa.models import db, User
 from flask import Flask
 
 from flask_login import LoginManager

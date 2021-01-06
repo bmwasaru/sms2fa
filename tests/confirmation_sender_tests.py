@@ -1,6 +1,6 @@
 from .base import BaseTest
 from flask import session
-from pewa import confirmation_sender
+from sms2fa import confirmation_sender
 from mock import patch
 from mock import MagicMock
 
