@@ -41,9 +41,8 @@ def sign_in():
         if user and user.is_password_valid(form.password.data):
             session['user_email'] = user.email
             return redirect(url_for('confirmation'))
+            send_confirmation_code(user.international_phone_number)
         flash('Wrong user/password.', 'error')
-
-        send_confirmation_code(user.international_phone_number)
     return render_template('sign_in.html', form=form)
 
 
