@@ -15,10 +15,7 @@ sms = africastalking.SMS
 
 def send_confirmation_code(to_number):
     verification_code = generate_code()
-    numbers = []
-    numbers.append(to_number)
-    sms.send(verification_code, numbers, sender_id)
-    del numbers
+    sms.send(verification_code, [to_number], sender_id)
     session['verification_code'] = verification_code
     return verification_code
 
