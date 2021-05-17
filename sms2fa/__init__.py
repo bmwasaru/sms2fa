@@ -5,11 +5,18 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_session import Session
 from flask_bootstrap import Bootstrap
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
 app = Flask(__name__)
 Bootstrap(app)
 login_manager = LoginManager()
 sess = Session()
+limiter = Limiter(
+    app,
+    key_func=get_remote_address,
+    default_limits=["50 per day", "10 per hour"]
+)
 
 
 def prepare_app(environment='development', p_db=db):

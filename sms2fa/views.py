@@ -8,6 +8,7 @@ from . import app
 from .models import User
 from .forms import LoginForm, SignUpForm
 from .confirmation_sender import send_confirmation_code
+from . import limiter
 
 
 @app.route('/')
@@ -46,6 +47,7 @@ def sign_in():
     return render_template('sign_in.html', form=form)
 
 
+@limiter.limit("10 per hour")
 @app.route('/confirmation', methods=['GET', 'POST'])
 def confirmation():
     user = User.query.get(session.get('user_email', '')) or abort(401)
